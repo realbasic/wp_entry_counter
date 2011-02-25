@@ -13,7 +13,7 @@ function entry_counter() {
 	kstat_css();
 	echoAnalytics();
 	echo "
-	<title>‹L–”ˆê——</title>
+	<title>è¨˜äº‹æ•°ä¸€è¦§</title>
 	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">
 	<style>th,td {
 	   border: 1px solid green;
@@ -110,7 +110,7 @@ function entry_counter() {
 		echo '<td>Graph</td>';
 		for($i = 1; $i <= getLastDay($ym); $i++){
 			if(isset($day[$i])){
-				echo '<td>'.str_repeat('¡<br>',$day[$i]).'</td>';
+				echo '<td>'.str_repeat('â– <br>',$day[$i]).'</td>';
 			}else{
 				echo '<td></td>';
 			}
@@ -144,9 +144,9 @@ function entry_counter() {
 	}
 
 	echo '<table style="border:solid 1px">';
-	echo '<tr><td>“Še“ú</td><td>“ŠeÒ–¼</td><td>ƒuƒƒOƒ^ƒCƒgƒ‹</td><td>ƒJƒeƒSƒŠ[</td><td>ƒ^ƒO</td></tr>';
+	echo '<tr><td>æŠ•ç¨¿æ—¥æ™‚</td><td>æŠ•ç¨¿è€…å</td><td>ãƒ–ãƒ­ã‚°ã‚¿ã‚¤ãƒˆãƒ«</td><td>ã‚«ãƒ†ã‚´ãƒªãƒ¼</td><td>ã‚¿ã‚°</td></tr>';
 	while($data = mysql_fetch_assoc($ret)){
-		//ƒ^ƒOEƒJƒeƒSƒŠ¶¬
+		//ã‚¿ã‚°ãƒ»ã‚«ãƒ†ã‚´ãƒªç”Ÿæˆ
 		$tag = "";
 		$cat = "";
 		$tcRet = mysql_query("SELECT * FROM wp_term_relationships AS A LEFT JOIN wp_term_taxonomy AS B ON A.term_taxonomy_id = B.term_taxonomy_id LEFT JOIN wp_terms AS C ON B.term_id = C.term_id WHERE A.object_id = '".$data['ID']."'");
